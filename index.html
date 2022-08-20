@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Basketball Scoreboard</title>
+  </head>
+  <body>
+    <div class="pole"></div>
+    <div class="first-board">
+      <div class="home">
+        <p class="normal-text">Home</p>
+        <div class="score display">
+          <p id="home" class="read big-text">0</p>
+        </div>
+        <div class="score-buttons">
+          <button onclick="addOneHome()" class="btn">+1</button>
+          <button onclick="addTwoHome()" class="btn">+2</button>
+          <button onclick="addThreeHome()" class="btn">+3</button>
+        </div>
+      </div>
+      <div class="timer">
+        <div class="time-board">
+          <p class="read big-text display">15 : 00</p>
+        </div>
+        <div class="period">
+          <p class="normal-text">Period</p>
+          <p id="period" class="read big-text display">0</p>
+          <button onclick="periodNr()" class="btn">+1</button>
+        </div>
+      </div>
+      <div class="guest">
+        <p class="normal-text">Guest</p>
+        <div class="score display">
+          <p id="guest" class="read big-text">0</p>
+        </div>
+        <div class="score-buttons">
+          <button onclick="addOneGuest()" class="btn">+1</button>
+          <button onclick="addTwoGuest() " class="btn">+2</button>
+          <button onclick="addThreeGuest()" class="btn">+3</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="second-board">
+      <div class="bord-container">
+        <div class="players">
+          <p class="normal-text">Players</p>
+          <div class="score display-small">
+            <p id="player" class="read big-text">0</p>
+          </div>
+          <div class="button-container">
+            <button onclick="substractPlayers()" class="btn half">-1</button>
+            <button onclick="addPlayers()" class="btn half">+1</button>
+          </div>
+        </div>
+
+        <div class="foults">
+          <p class="normal-text">Foults</p>
+          <div class="score display-small">
+            <p id="foults" class="read big-text">0</p>
+          </div>
+          <button onclick="foultAdd() " class="btn half">+1</button>
+        </div>
+      </div>
+      <div class="new-game-conainter">
+        <button onclick="newGame()" class="btn">NEW GAME</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

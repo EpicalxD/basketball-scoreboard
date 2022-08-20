@@ -1,0 +1,158 @@
+/* Colors */
+:root {
+  --bord-color: #20284a;
+  --display-color: #293462;
+  --readings-color: #f8ee64;
+  --border-color: #f24c4c;
+  --board-border-color: #878787;
+  --normal-text-color: white;
+  --pole-color: #333;
+}
+
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.read {
+  color: var(--readings-color);
+  font-family: "Black Ops One", cursive;
+}
+
+.big-text {
+  font-size: 48px;
+  text-align: center;
+}
+
+.normal-text {
+  font-size: 24px;
+  color: var(--normal-text-color);
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  padding: 1rem 0.7rem;
+  font-weight: 900;
+}
+
+.display {
+  background-color: var(--display-color);
+  padding: 1rem 2rem;
+  border: var(--border-color) solid 4px;
+  border-radius: 5px;
+}
+.display-small {
+  background-color: var(--display-color);
+  padding: 0.5rem 1rem;
+  border: var(--border-color) solid 4px;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 0.5rem;
+  font-size: 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: var(--readings-color);
+  font-family: "Black Ops One", cursive;
+  background-color: var(--display-color);
+  border: var(--border-color) 2px solid;
+  transition: color, background-color 0.3s;
+  text-align: center;
+}
+
+.btn:hover {
+  color: var(--bord-color);
+  background-color: var(--readings-color);
+}
+
+body {
+  background-color: aliceblue;
+  position: relative;
+  padding: 2%;
+  height: 100vh;
+}
+
+.pole {
+  width: 30px;
+  height: 98%;
+  background-color: var(--pole-color);
+  position: absolute;
+  top: 2%;
+  left: 49%;
+  z-index: -1;
+  border-radius: 5px 5px 0 0;
+}
+
+/* first-board */
+
+.first-board {
+  background-color: var(--bord-color);
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 3rem 3rem 1rem 3rem;
+  border: var(--board-border-color) 5px solid;
+  border-radius: 5px;
+}
+
+.period {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.second-board {
+  background-color: var(--bord-color);
+  width: 30%;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
+  border: var(--board-border-color) 5px solid;
+  border-radius: 5px;
+}
+.second-board {
+  display: flex;
+  flex-direction: column;
+}
+.bord-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.players {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foults {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.new-game-conainter {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+.half {
+  width: 50%;
+}
+.button-container {
+  display: flex;
+  flex-direction: row;
+}
+.button-container button {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
