@@ -6,9 +6,9 @@ const foultsNumber = document.getElementById("foults");
 let homeScore = 0;
 let guestScore = 0;
 let periodNumber = 0;
-let playerNr = 0;
+let playerNr = 24;
 let foultNr = 0;
-
+playerNumber.textContent = playerNr;
 // Add one
 
 function addOneHome() {
@@ -57,8 +57,13 @@ function periodNr() {
 // Players
 
 function addPlayers() {
-  playerNr++;
-  playerNumber.textContent = playerNr;
+  if (playerNr < 24) {
+    playerNr++;
+    playerNumber.textContent = playerNr;
+  } else {
+    playerNr = 24;
+    playerNumber.textContent = playerNr;
+  }
 }
 
 function substractPlayers() {
@@ -90,6 +95,6 @@ function newGame() {
   scoreHome.textContent = 0;
   scoreGuest.textContent = 0;
   period.textContent = 0;
-  playerNumber.textContent = 0;
+  playerNumber.textContent = 24;
   foultsNumber.textContent = 0;
 }
